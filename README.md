@@ -37,8 +37,8 @@ To-do list:
 Project is: _in progress_
 
 ## Credits
-MEAN setup and programming reference: https://www.youtube.com/watch?v=wtIvu085uU0
-READme references: https://bulldogjob.com/news/449-how-to-write-a-good-readme-for-your-github-project
+* MEAN setup and programming reference: https://www.youtube.com/watch?v=wtIvu085uU0
+* READme references: https://bulldogjob.com/news/449-how-to-write-a-good-readme-for-your-github-project
 
 ## Contact
 Created by [@droberts215]
