@@ -1,7 +1,7 @@
 {
   "name": "bookapp",
   "version": "1.0.0",
-  "description": "a MEAN application to log and analyze book use",
+  "description": "A MEAN application to log and analyze your reading history",
   "main": "app.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
