@@ -39,8 +39,8 @@ Project is: _in progress_
 
 ## Credits
 * MEAN stack setup and coding references: 
-* * https://www.youtube.com/watch?v=wtIvu085uU0
-* * "Express In Action" by Evan M. Hahn
+  * https://www.youtube.com/watch?v=wtIvu085uU0
+  * "Express In Action" by Evan M. Hahn
 * READme references: https://bulldogjob.com/news/449-how-to-write-a-good-readme-for-your-github-project
 
 ## Contact
