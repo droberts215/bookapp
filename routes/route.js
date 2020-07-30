@@ -44,7 +44,7 @@ router.get("/logout", function(req, res) {
 router.get('/signup', function(req, res) {
     res.render("signup");
 });
-router.post('signup', function(req, res, next) {
+router.post('/signup', function(req, res, next) {
     var username = req.body.username;
     var password = req.body.password;
 
@@ -52,8 +52,8 @@ router.post('signup', function(req, res, next) {
     User.findOne({ username: username}, function(err, user) {
         if (err) {return next(err)};
         if (user) {
-            req.flash("error", "User already exists. Please sign in");
-            return res.redirect("/login");
+            req.flash("error", "User already exists");
+            return res.redirect("/signup");
         }
         // Create new user
         var newUser = new User({
@@ -96,13 +96,16 @@ router.get('/api/book/:id', function(req, res) {
 });
 
 // Add book to list
-router.post('/api/addbook', function(req, res) {
+router.post('/api/addbook', ensureAuthenticated, function(req, res) {
     let newBook = new Book({
         name: req.body.name,
         author: req.body.author,
         webLink: req.body.webLink,
-        readCount: req.body.readCount,
-        lastReadDate: req.body.lastReadDate
+        readLog: [{
+            userId: req.locals.currentUser,
+            readCount: req.body.readCount,
+            lastReadDate: req.body.lastReadDate
+        }]
     });
 
     newBook.save(function(err, book) {
@@ -115,7 +118,7 @@ router.post('/api/addbook', function(req, res) {
 });
 
 // Update a book's last-read time as current time
-router.post('/api/updatelastread/:id', function(req, res) {
+router.post('/api/updatelastread/:id', ensureAuthenticated, function(req, res) {
     Book.updateOne({_id: req.params.id}, { lastReadDate: Date.now(), $inc: {readCount: 1} }, function(err, result){
         if (err) {
             res.json(err);
@@ -127,7 +130,7 @@ router.post('/api/updatelastread/:id', function(req, res) {
 });
 
 // Delete book from list
-router.post('/api/delbook/:id', function(req, res) {
+router.post('/api/delbook/:id', ensureAuthenticated, function(req, res) {
     Book.remove({_id: req.params.id}, function(err, result){
         if (err) {
             res.json(err);
@@ -144,6 +147,7 @@ router.use(function(req,res) {
     res.end("404 Error");
 });
 
+// Check authentication - Credit: "Express In Action" by Evan M. Hahn
 function ensureAuthenticated(req, res, next) {
     if (req.isAuthenticated()) {
         next();

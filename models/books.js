@@ -15,13 +15,10 @@ var bookSchema = mongoose.Schema({
     webLink:{
         type: String
     },
-    readCount:{
-        type: Number,
-        required: true
-    },
-    lastReadDate: [{
+    readLog:[{
         userId: {type: String, required: true},
-        date: {type: Date, required:true}
+        readCount: {type: Number, default: 0},
+        lastReadDate: {type: Date}
     }]
 });
 

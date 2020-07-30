@@ -56,7 +56,7 @@ mongoose.connection.on('error', (err)=>{
 // Direct access to public html directory
 app.use(express.static(path.resolve(__dirname, 'public')));
 
-// Define route mapping and direct all calls to this file
+// Define route mapping
 var route = require('./routes/route');
 app.use(route);
 
