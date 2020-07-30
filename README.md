@@ -14,10 +14,11 @@
 Reading a book before bedtime is a common practice for both children and adults. Having spent many nights wondering which book to pick next in my child's "read it again" rotation, I began thinking of a way to log reading history and run simple analytics on the data to tell me which books were being favored over others. Upon completion, I plan to load this onto a small AWS Lightsail instance and use it as a personal utility app.
 
 ## Technologies
-* Node.js - version 12.8.3
 * MongoDB - version 4.2.8
-* NPM - version 6.14.6 
-* Software dependencies listed in package.json
+* Express - version 4.17.1
+* Angular - version 10.0.4
+* Node.js - version 12.8.3
+* Software dependencies listed in package.json and client/package.json
 
 ## Setup
 Coming soon!
