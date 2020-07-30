@@ -24,7 +24,8 @@ Coming soon!
 
 ## Features
 List of features ready and TODOs for future development
-* Display a list of books, each with the following data: name, author, web link (for re-purchasing when it mysteriously disappears), read count, last read date
+* Create a unique user to track your reading history
+* Display your list of books, each with the following data: name, author, web link (for re-purchasing when it mysteriously disappears), read count, last read date
 * Select/Add/Delete individual books
 * Update the last read time, which will increment the read count automatically
 
@@ -37,7 +38,9 @@ To-do list:
 Project is: _in progress_
 
 ## Credits
-* MEAN setup and programming reference: https://www.youtube.com/watch?v=wtIvu085uU0
+* MEAN stack setup and coding references: 
+* * https://www.youtube.com/watch?v=wtIvu085uU0
+* * "Express In Action" by Evan M. Hahn
 * READme references: https://bulldogjob.com/news/449-how-to-write-a-good-readme-for-your-github-project
 
 ## Contact

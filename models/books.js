@@ -1,30 +1,29 @@
 // Import modules
 var mongoose = require('mongoose');
-const { Number } = require('mongoose');
 
 // Define Book schema
-const BookSchema = mongoose.Schema({
+var bookSchema = mongoose.Schema({
     name:{
         type: String,
-        required: true
+        required: true,
+        unique: true
     },
     author:{
         type: String,
         required: true
     },
     webLink:{
-        type: String,
-        required: false
+        type: String
     },
     readCount:{
         type: Number,
         required: true
     },
-    lastReadDate:{
-        type: Date,
-        required: false
-    }
+    lastReadDate: [{
+        userId: {type: String, required: true},
+        date: {type: Date, required:true}
+    }]
 });
 
 // Export book in defined schema
-const Book = module.exports = mongoose.model('Book', BookSchema);
+var Book = module.exports = mongoose.model('Book', bookSchema);
