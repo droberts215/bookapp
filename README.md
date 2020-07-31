@@ -1,5 +1,5 @@
 # bookapp
-> A MEAN application to log and analyze your reading history.
+> A MERN application to log and analyze your reading history.
 
 ## Table of contents
 * [General info](#general-info)
@@ -16,33 +16,35 @@ Reading a book before bedtime is a common practice for both children and adults.
 ## Technologies
 * MongoDB - version 4.2.8
 * Express - version 4.17.1
-* Angular - version 10.0.4
+* React - version 16.13.1
 * Node.js - version 12.8.3
-* Software dependencies listed in package.json and client/package.json
+* Additional software dependencies listed in package.json and bookapp/package.json
 
 ## Setup
 Coming soon!
 
 ## Features
 List of features ready and TODOs for future development
-* Create a unique user to track your reading history
-* Display your list of books, each with the following data: name, author, web link (for re-purchasing when it mysteriously disappears), read count, last read date
-* Select/Add/Delete individual books
-* Update the last read time, which will increment the read count automatically
+* Display a list of books, each with the following data: name (encoded web link for re-purchasing when it mysteriously disappears), author, read count, last read date
+* Add new books
+* Edit a book's web link, read count, and last read date
 
 To-do list:
-* Client-side coding
+* Format the lastReadDate value to remove the time
 * Graphical representation of book list data - bubble, radial, heat graph?
+* Add user functionality to individualize reading history logging - will still share a common book database but the readCount and lastReadDate values will be nested in a readLog array that stores them by user
+* Login and register pages after user functionality is added
 * Other fun and moderately useful things ...
 
 ## Status
 Project is: _in progress_
 
 ## Credits
-* MEAN stack setup and coding references: 
+* Mongo,Express,NodeJS config and coding references: 
   * https://www.youtube.com/watch?v=wtIvu085uU0
   * "Express In Action" by Evan M. Hahn
-* READme references: https://bulldogjob.com/news/449-how-to-write-a-good-readme-for-your-github-project
+* MERN stack config and coding reference: https://codingthesmartway.com/the-mern-stack-tutorial-building-a-react-crud-application-from-start-to-finish-part-1
+* READme reference: https://bulldogjob.com/news/449-how-to-write-a-good-readme-for-your-github-project
 
 ## Contact
-Created by [@droberts215]
+Created by [@droberts215](https://github.com/droberts215/)

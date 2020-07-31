@@ -15,11 +15,13 @@ var bookSchema = mongoose.Schema({
     webLink:{
         type: String
     },
-    readLog:[{
+    readCount: {type: Number, default: 0},
+    lastReadDate: {type: Date}
+    /* readLog:[{
         userId: {type: String, required: true},
         readCount: {type: Number, default: 0},
         lastReadDate: {type: Date}
-    }]
+    }] */
 });
 
 // Export book in defined schema
