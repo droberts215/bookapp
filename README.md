@@ -21,7 +21,15 @@ Reading a book before bedtime is a common practice for both children and adults.
 * Additional software dependencies listed in package.json and bookapp/package.json
 
 ## Setup
-Coming soon!
+Install MongoDB and NodeJS using set up tutorials linked below. Then, using NodeJS command line, create new app directory. Run NPM to install all dependencies. Modify the code as desired using VSCode (or your preferred editor). I didn't include the .env file so you'll need to add one in the root directory with the following values:
+* SERVER_PORT
+* DB (MongoDB address)
+* SESSION_KEY (not in use currently but kept in for future)
+
+I used Postman, Nodemon, and Firefox's dev tools for testing.
+
+## Screenshots
+
 
 ## Features
 List of features ready and TODOs for future development
@@ -30,17 +38,17 @@ List of features ready and TODOs for future development
 * Edit a book's web link, read count, and last read date
 
 To-do list:
-* Format the lastReadDate value to remove the time
+* Format the lastReadDate value to remove the time string
+* Add user functionality to individualize reading history logging. Users will still share a common book database to save server memory but the readCount and lastReadDate values will be nested in a readLog array that stores them per user.
+* Login and register pages once user functionality is added
 * Graphical representation of book list data - bubble, radial, heat graph?
-* Add user functionality to individualize reading history logging - will still share a common book database but the readCount and lastReadDate values will be nested in a readLog array that stores them by user
-* Login and register pages after user functionality is added
 * Other fun and moderately useful things ...
 
 ## Status
 Project is: _in progress_
 
 ## Credits
-* Mongo,Express,NodeJS config and coding references: 
+* Mongo, Express, & NodeJS config and coding references: 
   * https://www.youtube.com/watch?v=wtIvu085uU0
   * "Express In Action" by Evan M. Hahn
 * MERN stack config and coding reference: https://codingthesmartway.com/the-mern-stack-tutorial-building-a-react-crud-application-from-start-to-finish-part-1

@@ -7,13 +7,11 @@ export default class RegisterUser extends Component {
 
         this.onChangeUsername = this.onChangeUsername.bind(this);
         this.onChangePassword = this.onChangePassword.bind(this);
-        this.onChangeDisplayName = this.onChangeDisplayName.bind(this);
         this.onSubmit = this.onSubmit.bind(this);
 
         this.state = {
             username: '',
-            password: '',
-            displayName: ''
+            password: ''
         }
     }
 
@@ -29,20 +27,13 @@ export default class RegisterUser extends Component {
         });
     }
 
-    onChangeDisplayName(e) {
-        this.setState({
-            displayName: e.target.value
-        });
-    }
-
     // Submit book to database
     onSubmit(e) {
         e.preventDefault();
         
         const newUser = {
             username: this.state.username,
-            password: this.state.password,
-            displayName: this.state.displayName
+            password: this.state.password
         }
         console.log('User added.\n' + newUser.username); 
 
@@ -51,8 +42,7 @@ export default class RegisterUser extends Component {
 
         this.setState({
             username: '',
-            password: '',
-            displayName: ''
+            password: ''
         })
     }
 
@@ -79,14 +69,6 @@ export default class RegisterUser extends Component {
                                 onChange={this.onChangePassword}
                                 minlength="8"
                                 required
-                                />
-                    </div>
-                    <div className="form-group"> 
-                        <label>Display Name (Greeting): </label>
-                        <input  type="text"
-                                className="form-control"
-                                value={this.state.displayName}
-                                onChange={this.onChangeDisplayName}
                                 />
                     </div>
                     <div className="form-group">

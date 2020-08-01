@@ -6,7 +6,7 @@ import './bootstrap.min.css'
 import AddBook from "./components/add-book.component";
 import EditBook from "./components/edit-book.component";
 import BookList from "./components/book-list.component";
-import RegisterUser from "./components/register-user.component";
+/* import RegisterUser from "./components/register-user.component"; */
 
 // Import logo
 import logo from "./logo.png";
@@ -31,18 +31,18 @@ class App extends Component {
                   <Link to="/addbook" className="nav-link">Add Book</Link>
                 </li>
               </ul>
-              <ul className="navbar-nav ml-auto">
+              {/* <ul className="navbar-nav ml-auto">
                 <li className="navbar-item">
                   <Link to="/register" className="nav-link">Register</Link>
                 </li>
-              </ul>
+              </ul> */}
             </div>
           </nav>
           <br/>
           <Route path="/" exact component={BookList} />
           <Route path="/book/:id" component={EditBook} />
           <Route path="/addbook" component={AddBook} />
-          <Route path="/register" component={RegisterUser} />
+          {/* <Route path="/register" component={RegisterUser} /> */}
         </div>
       </Router>
     );

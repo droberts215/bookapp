@@ -1,7 +1,7 @@
 // Import modules
 var mongoose = require('mongoose');
 var bcrypt = require('bcrypt-nodejs');
-var SALT_FACTOR = 14;
+SALT_FACTOR = 14;
 
 // Define User schema
 var userSchema = mongoose.Schema({
@@ -13,16 +13,8 @@ var userSchema = mongoose.Schema({
     password:{
         type: String,
         required: true
-    },
-    displayName:{
-        type: String
-    },
+    }
 });
-
-// Return display name if set, username otherwise
-userSchema.methods.name = function() {
-    return this.displayName || this.username;
-};
 
 // Password encryption code - Credit: "Express In Action" by Evan M. Hahn
 var noop = function() {};
