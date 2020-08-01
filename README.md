@@ -29,8 +29,11 @@ Install MongoDB and NodeJS using set up tutorials linked below. Then, using Node
 I used Postman, Nodemon, and Firefox's dev tools for testing.
 
 ## Screenshots
+Reading List
 ![Book List](https://raw.githubusercontent.com/droberts215/bookapp/master/screenshots/BookList.PNG)
+Adding A Book
 ![Add Book](https://raw.githubusercontent.com/droberts215/bookapp/master/screenshots/AddBook.PNG)
+Editing A Book
 ![Edit Book](https://raw.githubusercontent.com/droberts215/bookapp/master/screenshots/EditBook.PNG)
 
 ## Features
