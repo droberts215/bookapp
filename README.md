@@ -11,7 +11,7 @@
 * [Contact](#contact)
 
 ## General info
-Reading a book before bedtime is a common practice for both children and adults. Having spent many nights wondering which book to pick next in my child's "read it again" rotation, I began thinking of a way to log reading history and run simple analytics on the data to tell me which books were being favored over others. Upon completion, I plan to load this onto a small AWS Lightsail instance and use it as a personal utility app.
+Reading a book before bedtime is a common practice for both children and adults. Having spent many nights wondering which book to pick next in my child's "read it again" rotation, I wanted a way to log our reading history and run simple analytics on the data to tell me which books were being favored over others. Upon completion, I plan to load this onto a small AWS Lightsail instance and use it as a personal utility app.
 
 ## Technologies
 * MongoDB - version 4.2.8
